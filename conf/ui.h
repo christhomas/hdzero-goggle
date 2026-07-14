@@ -8,23 +8,32 @@
 extern "C" {
 #endif
 
+// RobotoMono (vendored in src/fonts/) — instrument/technical typeface for the UI.
+extern const lv_font_t robotomono_14;
+extern const lv_font_t robotomono_16;
+extern const lv_font_t robotomono_18;
+extern const lv_font_t robotomono_20;
+extern const lv_font_t robotomono_24;
+extern const lv_font_t robotomono_26;
+extern const lv_font_t robotomono_30;
+
 #if defined(HDZGOGGLE) || defined(HDZGOGGLE2)
 #define DISP_HOR_RES_FHD                  1920
 #define DISP_VER_RES_FHD                  1080
-#define UI_MENU_ENTRY_FONT                &lv_font_montserrat_24
-#define UI_MENU_LABEL_FONT                &lv_font_montserrat_16
+#define UI_MENU_ENTRY_FONT                &robotomono_24
+#define UI_MENU_LABEL_FONT                &robotomono_16
 #define UI_MENU_SIZE                      lv_disp_get_hor_res(NULL) - 500, lv_disp_get_ver_res(NULL) - 96
 #define UI_MENU_POSITION                  250, 96
 #define UI_MENU_ROOT_SIZE                 250, 975
 #define UI_MENU_PROG_BAR_SIZE             320, 20
 #define UI_PAGE_VIEW_SIZE                 1053, 900
 #define UI_PAGE_TEXT_SIZE                 320, 60
-#define UI_PAGE_TEXT_FONT                 &lv_font_montserrat_24
+#define UI_PAGE_TEXT_FONT                 &robotomono_24
 #define UI_PAGE_TEXT_PAD                  12
-#define UI_PAGE_LABEL_FONT                &lv_font_montserrat_16
+#define UI_PAGE_LABEL_FONT                &robotomono_16
 #define UI_PAGE_LABEL_SIZE(cols)          320 * cols, 60
 #define UI_PAGE_LABEL_COMPACT_SIZE(cols)  120 * cols
-#define UI_PAGE_INFO_FONT                 &lv_font_montserrat_18
+#define UI_PAGE_INFO_FONT                 &robotomono_18
 #define UI_PAGE_INFO_SIZE(cols)           320 * cols, 40
 #define UI_PAGE_MSG_BOX_SIZE              600
 #define UI_PAGE_BUTTON_SIZE               160, 60
@@ -50,18 +59,18 @@ extern "C" {
 #define UI_MPLAYER_BTN_GAP                16
 #define UI_MPLAYER_SLD_WIDTH              400
 #define UI_MPLAYER_SLD_HEIGHT             3
-#define UI_PLAYER_TEXT_FONT               &lv_font_montserrat_26
+#define UI_PLAYER_TEXT_FONT               &robotomono_26
 #define UI_AUTOSCAN_COLS                  160, 150, 180, 220, 180, 160, LV_GRID_TEMPLATE_LAST
 #define UI_AUTOSCAN_ROWS                  60, 60, 60, 60, 60, 60, 60, 60, 60, 60, LV_GRID_TEMPLATE_LAST
 #define UI_SCANNOW_SCANNER_COLS           500, 20, 1164 - 520, LV_GRID_TEMPLATE_LAST
 #define UI_SCANNOW_SCANNER_ROWS           60, 60, 80, LV_GRID_TEMPLATE_LAST
 #define UI_SCANNOW_SIGNAL_COLS            120, 80, 80, 180, 100, 80, 80, 180, LV_GRID_TEMPLATE_LAST
 #define UI_SCANNOW_SIGNAL_ROWS            60, 60, 60, 60, 60, 60, 60, 60, 60, 60, LV_GRID_TEMPLATE_LAST
-#define UI_SCANNOW_READY_FONT             &lv_font_montserrat_26
+#define UI_SCANNOW_READY_FONT             &robotomono_26
 #define UI_SCANNOW_READY_PAD              12
-#define UI_SCANNOW_NOTE_FONT              &lv_font_montserrat_26
+#define UI_SCANNOW_NOTE_FONT              &robotomono_26
 #define UI_SCANNOW_NOTE_PAD               12
-#define UI_SCANNOW_CHAN_FONT              &lv_font_montserrat_40
+#define UI_SCANNOW_CHAN_FONT              &robotomono_30
 #define UI_SCANNOW_CHAN_PAD               12
 #define UI_SCANNOW_PAGE_PAD               60
 #define UI_SCANNOW_SCANNER_SIZE           1053, 250
@@ -85,7 +94,7 @@ extern "C" {
 #define UI_INPUT_DROPDOWN_WIDTH           320
 #define UI_OSD_COLS                       160, 180, 160, 160, 120, 160, LV_GRID_TEMPLATE_LAST
 #define UI_OSD_ROWS                       60, 60, 60, 60, 60, 60, 60, 60, 60, 60, LV_GRID_TEMPLATE_LAST
-#define UI_OSD_TEXT_FONT                  &lv_font_montserrat_20
+#define UI_OSD_TEXT_FONT                  &robotomono_20
 #define UI_PLAYBACK_COLS                  320, 320, 320, LV_GRID_TEMPLATE_LAST
 #define UI_PLAYBACK_ROWS                  150, 30, 150, 30, 150, 30, 30, LV_GRID_TEMPLATE_LAST
 #define UI_POWER_COLS                     160, 200, 160, 160, 120, 160, LV_GRID_TEMPLATE_LAST
@@ -127,7 +136,7 @@ extern "C" {
 #define UI_KEYBOARD_DIAL_RIGHT_BUTTON_IMG_POS  1270, 100
 #define UI_KEYBOARD_DIAL_RIGHT_BUTTON_IMG_TEXT 1360, 116
 
-#define UI_STYLE_SELECT_BG_COLOR     0x646464
+#define UI_STYLE_SELECT_BG_COLOR     0x2B333D
 #define UI_STYLE_DROPDOWN_BG_COLOR   0x646464
 #define UI_STYLE_DROPDOWN_TEXT_COLOR 0xFFFFFF
 #define UI_STYLE_KEYBOARD_BG_COLOR   0x646464
@@ -154,20 +163,20 @@ static inline int UI_STATUS_BAR_LABEL_WIDTH() {
 #elif defined HDZBOXPRO
 #define DISP_HOR_RES_FHD                  1280
 #define DISP_VER_RES_FHD                  720
-#define UI_MENU_ENTRY_FONT                &lv_font_montserrat_18
-#define UI_MENU_LABEL_FONT                &lv_font_montserrat_14
+#define UI_MENU_ENTRY_FONT                &robotomono_18
+#define UI_MENU_LABEL_FONT                &robotomono_14
 #define UI_MENU_SIZE                      lv_disp_get_hor_res(NULL) - 300, lv_disp_get_ver_res(NULL) - 48
 #define UI_MENU_POSITION                  150, 48
 #define UI_MENU_ROOT_SIZE                 240, 672
 #define UI_MENU_PROG_BAR_SIZE             210, 12
 #define UI_PAGE_VIEW_SIZE                 780, 600
 #define UI_PAGE_TEXT_SIZE                 210, 40
-#define UI_PAGE_TEXT_FONT                 &lv_font_montserrat_18
+#define UI_PAGE_TEXT_FONT                 &robotomono_18
 #define UI_PAGE_TEXT_PAD                  8
-#define UI_PAGE_LABEL_FONT                &lv_font_montserrat_14
+#define UI_PAGE_LABEL_FONT                &robotomono_14
 #define UI_PAGE_LABEL_SIZE(cols)          210 * cols, 40
 #define UI_PAGE_LABEL_COMPACT_SIZE(cols)  80 * cols
-#define UI_PAGE_INFO_FONT                 &lv_font_montserrat_18
+#define UI_PAGE_INFO_FONT                 &robotomono_18
 #define UI_PAGE_INFO_SIZE(cols)           210 * cols, 26
 #define UI_PAGE_MSG_BOX_SIZE              400
 #define UI_PAGE_BUTTON_SIZE               100, 40
@@ -193,18 +202,18 @@ static inline int UI_STATUS_BAR_LABEL_WIDTH() {
 #define UI_MPLAYER_BTN_GAP                4
 #define UI_MPLAYER_SLD_WIDTH              260
 #define UI_MPLAYER_SLD_HEIGHT             2
-#define UI_PLAYER_TEXT_FONT               &lv_font_montserrat_14
+#define UI_PLAYER_TEXT_FONT               &robotomono_14
 #define UI_AUTOSCAN_COLS                  106, 100, 120, 146, 120, 106, LV_GRID_TEMPLATE_LAST
 #define UI_AUTOSCAN_ROWS                  40, 40, 40, 40, 40, 40, 40, 40, 40, 40, LV_GRID_TEMPLATE_LAST
 #define UI_SCANNOW_SCANNER_COLS           320, 12, 420, LV_GRID_TEMPLATE_LAST
 #define UI_SCANNOW_SCANNER_ROWS           40, 40, 50, LV_GRID_TEMPLATE_LAST
 #define UI_SCANNOW_SIGNAL_COLS            80, 52, 52, 120, 60, 52, 52, 120, LV_GRID_TEMPLATE_LAST
 #define UI_SCANNOW_SIGNAL_ROWS            40, 40, 40, 40, 40, 40, 40, 40, 40, 40, LV_GRID_TEMPLATE_LAST
-#define UI_SCANNOW_READY_FONT             &lv_font_montserrat_18
+#define UI_SCANNOW_READY_FONT             &robotomono_18
 #define UI_SCANNOW_READY_PAD              8
-#define UI_SCANNOW_NOTE_FONT              &lv_font_montserrat_16
+#define UI_SCANNOW_NOTE_FONT              &robotomono_16
 #define UI_SCANNOW_NOTE_PAD               8
-#define UI_SCANNOW_CHAN_FONT              &lv_font_montserrat_26
+#define UI_SCANNOW_CHAN_FONT              &robotomono_26
 #define UI_SCANNOW_CHAN_PAD               8
 #define UI_SCANNOW_PAGE_PAD               40
 #define UI_SCANNOW_SCANNER_SIZE           780, 160
@@ -228,7 +237,7 @@ static inline int UI_STATUS_BAR_LABEL_WIDTH() {
 #define UI_INPUT_DROPDOWN_WIDTH           210
 #define UI_OSD_COLS                       106, 120, 106, 106, 80, 106, LV_GRID_TEMPLATE_LAST
 #define UI_OSD_ROWS                       40, 40, 40, 40, 40, 40, 40, 40, 40, 40, LV_GRID_TEMPLATE_LAST
-#define UI_OSD_TEXT_FONT                  &lv_font_montserrat_14
+#define UI_OSD_TEXT_FONT                  &robotomono_14
 #define UI_PLAYBACK_COLS                  210, 210, 210, LV_GRID_TEMPLATE_LAST
 #define UI_PLAYBACK_ROWS                  100, 20, 100, 20, 100, 20, 20, LV_GRID_TEMPLATE_LAST
 #define UI_POWER_COLS                     106, 132, 106, 106, 80, 106, LV_GRID_TEMPLATE_LAST

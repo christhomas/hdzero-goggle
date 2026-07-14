@@ -326,9 +326,9 @@ void main_menu_init(void) {
     menu = lv_menu_create(lv_scr_act());
     lv_obj_clear_flag(menu, LV_OBJ_FLAG_SCROLLABLE);
 
-    lv_obj_set_style_bg_color(menu, lv_color_make(32, 32, 32), 0);
+    lv_obj_set_style_bg_color(menu, lv_color_make(22, 26, 31), 0);
     lv_obj_set_style_border_width(menu, 2, 0);
-    lv_obj_set_style_border_color(menu, lv_color_make(255, 0, 0), 0);
+    lv_obj_set_style_border_color(menu, lv_color_make(242, 58, 58), 0);
     lv_obj_set_style_border_side(menu, LV_BORDER_SIDE_LEFT | LV_BORDER_SIDE_RIGHT, 0);
     lv_obj_set_size(menu, UI_MENU_SIZE);
     lv_obj_set_pos(menu, UI_MENU_POSITION);
